@@ -1,0 +1,19 @@
+html {
+    font-family: 'Roboto', sans-serif;
+    color:rgb(48, 48, 48)
+}
+
+body {
+    background-color: rgb(192, 253, 233);
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+table {
+    display: flex;
+    justify-content: center;
+}
