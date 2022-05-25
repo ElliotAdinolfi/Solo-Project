@@ -11,4 +11,11 @@ router.get('/',
     }
 )
 
+router.post('/',
+    bookController.newBook,
+    (req, res) => {
+        res.status(200).json(res.locals.newBook);
+    }
+)
+
 module.exports = router;
