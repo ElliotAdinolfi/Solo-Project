@@ -18,4 +18,18 @@ router.post('/',
     }
 )
 
+router.delete('/',
+    bookController.deleteBook,
+    (req,res) => {
+        res.status(200).json(res.locals.deleted);
+    }
+)
+
+router.put('/', 
+    bookController.updateBook,
+    (req, res) => {
+        res.status(200).json(res.locals.updated);
+    }
+)
+
 module.exports = router;

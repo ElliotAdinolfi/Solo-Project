@@ -37,4 +37,15 @@ bookController.deleteBook = (req, res, next) => {
         .catch(err => next(console.log('Error in deleteBook middleware: ', err)));
 }
 
+bookController.updateBook = (req, res, next) => {
+    const query = `UPDATE booklist SET pages_read=${req.body.read} WHERE title='${req.body.title}';`
+    console.log('Update Query: ', req.body);
+    db.query(query)
+        .then(data => {
+            res.locals.updated = data;
+            return next();
+        })
+        .catch(err => console.log('Error in UpdateBook middleware: ', err))
+}
+
 module.exports = bookController;

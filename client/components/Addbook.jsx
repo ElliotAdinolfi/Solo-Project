@@ -7,64 +7,64 @@ const AddBook = props => {
 
 // add onchange functions to hold data from input fields for each one
 
-let titleInput;
-function titleData (e) {
-    titleInput = e.target.value;
-    return titleInput;
-}
-
-let seriesInput;
-function seriesData (e) {
-    seriesInput = e.target.value;
-    return seriesInput;
-}
-
-let authorInput;
-function authorData (e) {
-    authorInput = e.target.value;
-    return authorInput;
-}
-
-let ratingInput;
-function ratingData (e) {
-    ratingInput = e.target.value;
-    return Number(ratingInput);
-}
-
-let readInput;
-function readData (e) {
-    readInput = e.target.value;
-    return Number(readInput);
-}
-
-let pagesInput;
-function pagesData (e) {
-    pagesInput = e.target.value;
-    return Number(pagesInput);
-}
-
-function pressedButton () {
-    // do fetch post here
-    const postBook = {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-            title: titleInput, 
-            series: seriesInput,
-            author: authorInput,
-            pagesRead: readInput,
-            totalPages: pagesInput,
-            rating: ratingInput
-        })
+    let titleInput;
+    function titleData (e) {
+        titleInput = e.target.value;
+        return titleInput;
     }
-    console.log(postBook)
-    fetch('/api/', postBook)
-        .then(res => res.json())
-        .then(res => {
-            console.log('API post sent', res)
-        })
-        .catch(err => console.log('error sending api post req', err))
-}
+
+    let seriesInput;
+    function seriesData (e) {
+        seriesInput = e.target.value;
+        return seriesInput;
+    }
+
+    let authorInput;
+    function authorData (e) {
+        authorInput = e.target.value;
+        return authorInput;
+    }
+
+    let ratingInput;
+    function ratingData (e) {
+        ratingInput = e.target.value;
+        return Number(ratingInput);
+    }
+
+    let readInput;
+    function readData (e) {
+        readInput = e.target.value;
+        return Number(readInput);
+    }
+
+    let pagesInput;
+    function pagesData (e) {
+        pagesInput = e.target.value;
+        return Number(pagesInput);
+    }
+
+    function pressedButton () {
+        // do fetch post here
+        const postBook = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                title: titleInput, 
+                series: seriesInput,
+                author: authorInput,
+                pagesRead: readInput,
+                totalPages: pagesInput,
+                rating: ratingInput
+            })
+        }
+        console.log(postBook)
+        fetch('/api/', postBook)
+            .then(res => res.json())
+            .then(res => {
+                console.log('API post sent', res)
+            })
+            .catch(err => console.log('error sending api post req', err))
+    }
 
 
     return (

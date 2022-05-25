@@ -27,7 +27,7 @@ const DeleteBook = props => {
         console.log('Entry to be deleted: ', deleteBook.body)
         
         fetch('/api/', deleteBook)
-            // .then(res => res.json())
+            .then(res => res.json())
             .then(res => {
                 console.log('API delete req sent', res)
             })

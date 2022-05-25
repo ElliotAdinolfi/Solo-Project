@@ -4,6 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 import AddBook from './components/Addbook.jsx';
 import Booklist from './components/Booklist.jsx';
 import DeleteBook from './components/Deletebook.jsx';
+import UpdateBook from './components/Updatebook.jsx';
 
 import './styles.css';
 
@@ -23,6 +24,7 @@ const App = props => {
                 <Booklist />
                 <div id="inputs">
                     <AddBook />
+                    <UpdateBook />
                     <DeleteBook />
                 </div>
             </main>
