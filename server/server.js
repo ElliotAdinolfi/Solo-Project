@@ -18,7 +18,7 @@ app.use(express.json());
 app.get('/', (req, res) => res.status(200).sendFile(path.join(__dirname, '../client/index.js')));
 
 // route handler to api for sql database
-app.use('/api', apiRouter);
+app.use('/api/', apiRouter);
 
 
 // 404 error handler for all pages that are not defined

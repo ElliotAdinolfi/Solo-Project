@@ -20,6 +20,7 @@
   "homepage": "https://github.com/ElliotAdinolfi/Solo-Project#readme",
   "dependencies": {
     "express": "^4.18.1",
+    "node-fetch": "^2.6.7",
     "pg": "^8.7.3",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",

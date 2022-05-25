@@ -16,4 +16,31 @@ h1 {
 table {
     display: flex;
     justify-content: center;
+    table-layout: fixed;
+    border-collapse: collapse;
+    margin-top: 100px;
+}
+
+td {
+    text-align: center;
+    border: solid 2px black;
+    padding: 5px;
+    margin: 5px
+}
+
+th {
+    text-align: center;
+    border: solid 2px black;
+}
+
+button {
+    margin-top: 10px;
+}
+
+#newBook {
+    display: flex;
+    flex-direction: column;
+    margin: 25px;
+    align-items: center;
+    justify-content: center;
 }

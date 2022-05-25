@@ -10,3 +10,5 @@ router.get('/',
         res.status(200).json(res.locals.books);
     }
 )
+
+module.exports = router;
