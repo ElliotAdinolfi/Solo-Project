@@ -4,7 +4,7 @@ const db = require('../models/bookModels.js');
 const bookController = {};
 
 bookController.getBooks = (req, res, next) => {
-    const query = 'SELECT * FROM books';
+    const query = 'SELECT * FROM booklist';
     db.query(query)
         .then(data => {
             console.log('some random text');
@@ -16,14 +16,25 @@ bookController.getBooks = (req, res, next) => {
 }
 
 bookController.newBook = (req, res, next) => {
-    const query = `INSERT INTO Books (Title, Series, Author, Rating) VALUES (${req.body.title}, ${req.body.series}, ${req.body.author}, ${req.body.rating})`;
-    console.log(req.body);
+    const query = `INSERT INTO booklist (Title, Series, Author, Rating, Pages_Read, Total_Pages) VALUES ('${req.body.title}', '${req.body.series}', '${req.body.author}', ${req.body.rating}, ${req.body.pagesRead}, ${req.body.totalPages});`;
+    console.log('query: ', req.body);
     db.query(query)
         .then(data => {
             res.locals.newBook = data;
             return next();
         })
         .catch(err => console.log(err));
+}
+
+bookController.deleteBook = (req, res, next) => {
+    const query = `DELETE FROM booklist WHERE title='${req.body.title}';`;
+    console.log('Delete Query: ', req.body);
+    db.query(query) 
+        .then(data => {
+            res.locals.deleted = data;
+            return next();
+        })
+        .catch(err => next(console.log('Error in deleteBook middleware: ', err)));
 }
 
 module.exports = bookController;

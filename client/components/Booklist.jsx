@@ -25,19 +25,26 @@ const booklist = props => {
                 <td>{book.title}</td>
                 <td>{book.series}</td>
                 <td>{book.author}</td>
+                <td>{book.pages_read}</td>
+                <td>{book.total_pages}</td>
                 <td>{book.rating}</td>
             </tr>
         );
     })
-    console.log(list);
+
+    console.log('List of Books: ', list);
 
     return (
         <table>
             <tbody>
-                <th>Title</th>
-                <th>Series</th>
-                <th>Author</th>
-                <th>Rating</th>
+                <tr>
+                    <th className="headerRow">Title</th>
+                    <th className="headerRow">Series</th>
+                    <th className="headerRow">Author</th>
+                    <th className="headerRow">Pages Read</th>
+                    <th className="headerRow">Total Pages</th>
+                    <th className="headerRow">Rating</th>
+                </tr>
                 {list}
             </tbody>
         </table>

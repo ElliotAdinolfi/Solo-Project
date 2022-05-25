@@ -37,10 +37,37 @@ button {
     margin-top: 10px;
 }
 
+#inputs {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+}
+
 #newBook {
     display: flex;
     flex-direction: column;
     margin: 25px;
     align-items: center;
     justify-content: center;
+}
+
+#delete {
+    display: flex;
+    flex-direction: column;
+    margin: 25px;
+    align-items: center;
+    justify-content: center;
+}
+
+.delete {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.headerRow {
+    font-weight: bold;   
 }
