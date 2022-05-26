@@ -4,7 +4,7 @@ html {
 }
 
 body {
-    background-color: rgb(192, 253, 233);
+    background-color: rgb(191, 249, 230);
 }
 
 h1 {
@@ -21,6 +21,11 @@ table {
     margin-top: 100px;
 }
 
+table td, table th {
+    background-color: rgb(178, 237, 217);
+    box-shadow: 10px 5px 7px grey;
+}
+
 td {
     text-align: center;
     border: solid 2px black;
@@ -35,6 +40,10 @@ th {
 
 button {
     margin-top: 10px;
+    background-color: rgb(198, 198, 198);
+    border: none;
+    border-radius: 5px;
+    padding: 5px 12px 5px 12px;
 }
 
 #inputs {

@@ -72,17 +72,17 @@ const AddBook = props => {
         <span id="newBook">
             <h2>Add New Book</h2>
             <label for="title">Title:</label>
-            <input type="text" id="title" required onChange={titleData}></input>
+            <input type="text" id="title" onChange={titleData}></input>
             <label for="series">Series:</label>
-            <input type="text" id="series" required onChange={seriesData}></input>
+            <input type="text" id="series" onChange={seriesData}></input>
             <label for="author">Author:</label>
-            <input type="text" id="author" required onChange={authorData}></input>
+            <input type="text" id="author" onChange={authorData}></input>
             <label for="read">Pages Read:</label>
-            <input type="text" id="read" required onChange={readData}></input>
+            <input type="text" id="read" onChange={readData}></input>
             <label for="pages">Total Pages:</label>
-            <input type="text" id="pages" required onChange={pagesData}></input>
+            <input type="text" id="pages" onChange={pagesData}></input>
             <label for="rating">Rating:</label>
-            <input type="text" id="rating" required onChange={ratingData}></input>
+            <input type="text" id="rating" onChange={ratingData}></input>
             <button onClick={pressedButton}>Add Book</button>
         </span>
     )
