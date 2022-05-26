@@ -23,7 +23,6 @@ const booklist = props => {
     const list = results.map((book) => {
         const percent = ((book.pages_read/book.total_pages)*100).toFixed(2) + '%';
         totalPages += book.pages_read;
-        console.log('Pages Read: ', totalPages)
         return (
             <tr key={book.id}>
                 <td>{book.title}</td>

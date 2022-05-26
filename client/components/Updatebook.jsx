@@ -49,7 +49,7 @@ const UpdateBook = props => {
             <input type="text" id="title3" onChange={titleData}></input>
             <label for="read">Pages Read:</label>
             <input type="text" id="read" onChange={readData}></input>
-            <button onClick={pressedButton}>Update</button>
+            <button onClick={pressedButton}>Update<br></br>Progress</button>
         </span>
     )
 }
