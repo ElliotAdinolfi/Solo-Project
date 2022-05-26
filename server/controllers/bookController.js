@@ -4,7 +4,7 @@ const db = require('../models/bookModels.js');
 const bookController = {};
 
 bookController.getBooks = (req, res, next) => {
-    const query = 'SELECT * FROM booklist';
+    const query = 'SELECT * FROM booklist ORDER BY author';
     db.query(query)
         .then(data => {
             console.log('some random text');
