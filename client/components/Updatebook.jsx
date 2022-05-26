@@ -37,6 +37,7 @@ const UpdateBook = props => {
             .then(res => res.json())
             .then(res => {
                 console.log('API update req sent', res)
+                document.location.refresh(true);
             })
             .catch(err => console.log('error sending api update req', err))
     }

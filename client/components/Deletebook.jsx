@@ -30,6 +30,7 @@ const DeleteBook = props => {
             .then(res => res.json())
             .then(res => {
                 console.log('API delete req sent', res)
+                document.location.refresh(true);
             })
             .catch(err => console.log('error sending api delete req', err))
     }
