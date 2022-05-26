@@ -49,6 +49,11 @@ button {
     border: 1px solid rgb(109, 109, 109)
 }
 
+button:hover {
+    background-color: #a5a5a5;
+    cursor: pointer;
+}
+
 input:focus {
     outline: none;
     border-radius: 3px;
