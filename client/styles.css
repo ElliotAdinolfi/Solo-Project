@@ -11,6 +11,7 @@ h1 {
     display: flex;
     justify-content: center;
     margin-top: 50px;
+    font-size: 4em;
 }
 
 table {
@@ -18,7 +19,7 @@ table {
     justify-content: center;
     table-layout: fixed;
     border-collapse: collapse;
-    margin-top: 100px;
+    margin-top: 10px;
 }
 
 table td, table th {
@@ -44,6 +45,13 @@ button {
     border: none;
     border-radius: 5px;
     padding: 5px 12px 5px 12px;
+}
+
+.timeRead {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
 }
 
 #inputs {

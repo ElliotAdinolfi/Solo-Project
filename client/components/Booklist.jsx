@@ -18,9 +18,12 @@ const booklist = props => {
             .catch(err => console.log(err))
     }, []);
 
+    let totalPages = 0;
     // console.log(results); 
     const list = results.map((book) => {
         const percent = ((book.pages_read/book.total_pages)*100).toFixed(2) + '%';
+        totalPages += book.pages_read;
+        console.log('Pages Read: ', totalPages)
         return (
             <tr key={book.id}>
                 <td>{book.title}</td>
@@ -35,22 +38,27 @@ const booklist = props => {
     })
 
     console.log('List of Books: ', list);
+    const estimatedTime = (totalPages/60).toFixed(2);
 
     return (
-        <table>
-            <tbody>
-                <tr>
-                    <th className="headerRow">Title</th>
-                    <th className="headerRow">Series</th>
-                    <th className="headerRow">Author</th>
-                    <th className="headerRow">Pages Read</th>
-                    <th className="headerRow">Total Pages</th>
-                    <th className="headerRow">Progress</th>
-                    <th className="headerRow">Rating</th>
-                </tr>
-                {list}
-            </tbody>
-        </table>
+        <div>
+            <table>
+                <tbody>
+                    <tr>
+                        <th className="headerRow">Title</th>
+                        <th className="headerRow">Series</th>
+                        <th className="headerRow">Author</th>
+                        <th className="headerRow">Pages Read</th>
+                        <th className="headerRow">Total Pages</th>
+                        <th className="headerRow">Progress</th>
+                        <th className="headerRow">Rating</th>
+                    </tr>
+                    {list}
+                </tbody>
+            </table>
+            <h4 className="timeRead">You have read {totalPages} pages in total!</h4>
+            <h4 className="timeRead">Estimated time spent reading {estimatedTime} hours</h4>
+        </div>
     );
 };
 

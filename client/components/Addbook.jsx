@@ -62,7 +62,7 @@ const AddBook = props => {
             .then(res => res.json())
             .then(res => {
                 console.log('API post sent', res);
-                document.location.refresh(true);
+                document.location.reload(true);
             })
             .catch(err => console.log('error sending api post req', err))
     }
